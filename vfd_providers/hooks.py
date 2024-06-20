@@ -39,6 +39,16 @@ doctype_js = {
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+after_install = [
+    "vfd_providers.utils.create_custom_fields.execute",
+    "vfd_providers.utils.create_custom_fields.create_property_setter",
+]
+
+after_migrate = [
+    "vfd_providers.utils.create_custom_fields.execute",
+    "vfd_providers.utils.create_property_setter.execute",
+]
+
 # Home Pages
 # ----------
 
